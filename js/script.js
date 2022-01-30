@@ -199,10 +199,14 @@ traffic.current.restButton.addEventListener("click", () => {
 })
 
 function clickSound() {
-	let audio = new Audio()
-	audio.src = "https://github.com/Arthur410/pomodoro/blob/main/other/pressbtn.mp3"
-	audio.volume = 0.1
-	audio.autoplay = true
+	let audioBlock = document.createElement("iframe")
+	audioBlock.src = "../other/pressbtn.mp3"
+	audioBlock.style.display = "none"
+	audioBlock.allow = "autoplay"
+	document.body.appendChild(audioBlock)
+	setTimeout(() => {
+		document.body.removeChild(audioBlock)
+	}, 750)
 }
 
 
