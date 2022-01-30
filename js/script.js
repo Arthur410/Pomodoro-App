@@ -198,17 +198,6 @@ traffic.current.restButton.addEventListener("click", () => {
 	}
 })
 
-function clickSound() {
-	let audioBlock = document.createElement("iframe")
-	audioBlock.src = "https://github.com/Arthur410/pomodoro/blob/main/other/pressbtn.mp3"
-	audioBlock.style.display = "none"
-	audioBlock.allow = "autoplay"
-	document.body.appendChild(audioBlock)
-	setTimeout(() => {
-		document.body.removeChild(audioBlock)
-	}, 650)
-}
-
 
 // sidebar active
 const settingsButton = document.querySelector('.settings')
